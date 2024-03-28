@@ -23,6 +23,6 @@ check folder:
 
 
 test job:
-stage: test
+  stage: test
   script:
     - yarn test

@@ -2,6 +2,7 @@ stages:
   - build
   - check
   - test
+
 build website:
   image: node:20-alpine
   stage: build
@@ -17,12 +18,11 @@ build website:
 check folder:
   stage: check
   script:
-    - cd build
-    - find build -name "index.html"
+    - find /build -name "index.html"
 
 
 
 test job:
-  stage: test
+stage: test
   script:
     - yarn test

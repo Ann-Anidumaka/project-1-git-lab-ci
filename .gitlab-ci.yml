@@ -16,13 +16,18 @@ build website:
             - build
 
 check folder:
+  image: alphine
   stage: check
   script:
-    - find /mnt/c/Users/KING\ G/Gitlab/project-1-git-lab-ci/build -name "index.html"
+    - - test -f build/index.html
+
+
 
 
 
 test job:
+  image: node:20-alpine
   stage: test
   script:
+    - yarn install
     - yarn test

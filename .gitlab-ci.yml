@@ -18,7 +18,7 @@ build website:
 check folder:
   stage: check
   script:
-    - find /build -name "index.html"
+    - find /mnt/c/Users/KING\ G/Gitlab/project-1-git-lab-ci/build -name "index.html"
 
 
 

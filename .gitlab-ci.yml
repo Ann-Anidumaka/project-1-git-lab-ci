@@ -1,5 +1,28 @@
+stages:
+  - build
+  - check
+  - test
 build website:
   image: node:20-alpine
+  stage: build
   script:
     - yarn install
     - yarn build
+
+
+  artifacts:
+        paths:
+            - build
+
+check folder:
+  stage: check
+  script:
+    - cd build
+    - find build -name "index.html"
+
+
+
+test job:
+stage: test
+  script:
+    - yarn test

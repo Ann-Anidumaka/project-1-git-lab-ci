@@ -16,7 +16,7 @@ build website:
             - build
 
 check folder:
-  image: alphine
+  image: alpine
   stage: check
   script:
     - test -f build/index.html
